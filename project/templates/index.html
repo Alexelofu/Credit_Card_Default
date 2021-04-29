@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Predictz</title>
+    <link rel="stylesheet" type="text/css" href="./static/mycss.css", media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="./static/mycss2.css", media="screen,projection"/>
+</head>
+<body>
+<div id="body">
+            <div class='background'>
+                <div class="text1">
+                    <h1>WELCOME TO CREDIT CARD DEFAULT PREDICTION</h1>
+                    <p id=header>made by Alexander</p>
+                </div>
+            </div>
+    <div class=paragraph1>
+        <p>
+             I created a machine learning model using Xgboost classification model.
+        </p>
+        
+   
+        <p>
+        Its a fun project ,I just want to make the end product using the machine learning model,which I created in python. For more information <a href="#" target="_blank">click here.</a>
+        </p>
+    </div>
+      <div class=form>
+        
+        <form action="/predict" method="post">
+            <label class='select_label'>LIMIT </label>
+            <input type="number" placeholder="Enter Limit amount" id='lotsize' name='LIMIT'><br>
+            
+            <label class='select_label'>Sex</label>
+            <Select id='one_story' name='SEX'>
+            <option value='1'>Male</option>
+             <option selected value="2" >Female</option>
+            </Select><br>
+            <label class='select_label'>Education </label>
+            <Select id='three_story' name='EDUCATION'>
+            <option value='1'>Graduates school</option>
+             <option selected value="2" >University</option>
+              <option selected value="3" >High School</option>
+               <option selected value="4" >Others</option>
+            </Select><br>
+            <label class='select_label'>Marriage </label>
+            <Select id='two_story' name='MARRIAGE'>
+            <option value='1'>Married</option>
+             <option selected value="2" >Single</option>
+              <option selected value="3" >Others</option>
+            </Select><br>
+
+            <label>Age</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='AGE'><br>
+            
+            <span><p> History of Repayment Status</p></span>
+
+            <label class='select_label'>April, 2005</label>
+            <Select id='two_story' name='PAY_0'>
+            <option value='-1'>Paid duly</option>
+             <option selected value="0" >No Delay</option>
+              <option selected value="1" >Payment delayed for one month</option>
+               <option selected value="2" >Payment delayed for two months</option>
+                <option selected value="3" >Payment delayed for three months</option>
+                 <option selected value="4" >Payment delayed for four months</option>
+                  <option selected value="5" >Payment delayed for five months</option>
+                   <option selected value="6" >Payment delayed for six months</option>
+                    <option selected value="7" >Payment delayed for seven month</option>
+                     <option selected value="8" >Payment delayed for eight month</option>
+                      <option selected value="9" >Payment delayed for nine or more months</option>
+               
+            </Select><br>
+
+            <label class='select_label'>May, 2005</label>
+            <Select id='two_story' name='PAY_2'>
+            <option value='-1'>Paid duly</option>
+             <option selected value="0" >No Delay</option>
+              <option selected value="1" >Payment delayed for one month</option>
+               <option selected value="2" >Payment delayed for two months</option>
+                <option selected value="3" >Payment delayed for three months</option>
+                 <option selected value="4" >Payment delayed for four months</option>
+                  <option selected value="5" >Payment delayed for five months</option>
+                   <option selected value="6" >Payment delayed for six months</option>
+                    <option selected value="7" >Payment delayed for seven month</option>
+                     <option selected value="8" >Payment delayed for eight month</option>
+                      <option selected value="9" >Payment delayed for nine or more months</option>
+               
+            </Select><br>
+
+            <label class='select_label'>June, 2005</label>
+            <Select id='two_story' name='PAY_3'>
+            <option value='-1'>Paid duly</option>
+             <option selected value="0" >No Delay</option>
+              <option selected value="1" >Payment delayed for one month</option>
+               <option selected value="2" >Payment delayed for two months</option>
+                <option selected value="3" >Payment delayed for three months</option>
+                 <option selected value="4" >Payment delayed for four months</option>
+                  <option selected value="5" >Payment delayed for five months</option>
+                   <option selected value="6" >Payment delayed for six months</option>
+                    <option selected value="7" >Payment delayed for seven month</option>
+                     <option selected value="8" >Payment delayed for eight month</option>
+                      <option selected value="9" >Payment delayed for nine or more months</option>
+               
+            </Select><br>
+
+            <label class='select_label'>July, 2005</label>
+            <Select id='two_story' name='PAY_4'>
+            <option value='-1'>Paid duly</option>
+             <option selected value="0" >No Delay</option>
+              <option selected value="1" >Payment delayed for one month</option>
+               <option selected value="2" >Payment delayed for two months</option>
+                <option selected value="3" >Payment delayed for three months</option>
+                 <option selected value="4" >Payment delayed for four months</option>
+                  <option selected value="5" >Payment delayed for five months</option>
+                   <option selected value="6" >Payment delayed for six months</option>
+                    <option selected value="7" >Payment delayed for seven month</option>
+                     <option selected value="8" >Payment delayed for eight month</option>
+                      <option selected value="9" >Payment delayed for nine or more months</option>
+               
+            </Select><br>
+
+            <label class='select_label'>August, 2005</label>
+            <Select id='two_story' name='PAY_5'>
+            <option value='-1'>Paid duly</option>
+             <option selected value="0" >No Delay</option>
+              <option selected value="1" >Payment delayed for one month</option>
+               <option selected value="2" >Payment delayed for two months</option>
+                <option selected value="3" >Payment delayed for three months</option>
+                 <option selected value="4" >Payment delayed for four months</option>
+                  <option selected value="5" >Payment delayed for five months</option>
+                   <option selected value="6" >Payment delayed for six months</option>
+                    <option selected value="7" >Payment delayed for seven month</option>
+                     <option selected value="8" >Payment delayed for eight month</option>
+                      <option selected value="9" >Payment delayed for nine or more months</option>
+               
+            </Select><br>
+
+            <label class='select_label'>September, 2005</label>
+            <Select id='two_story' name='PAY_6'>
+            <option value='-1'>Paid duly</option>
+             <option selected value="0" >No Delay</option>
+              <option selected value="1" >Payment delayed for one month</option>
+               <option selected value="2" >Payment delayed for two months</option>
+                <option selected value="3" >Payment delayed for three months</option>
+                 <option selected value="4" >Payment delayed for four months</option>
+                  <option selected value="5" >Payment delayed for five months</option>
+                   <option selected value="6" >Payment delayed for six months</option>
+                    <option selected value="7" >Payment delayed for seven month</option>
+                     <option selected value="8" >Payment delayed for eight month</option>
+                      <option selected value="9" >Payment delayed for nine or more months</option>
+               
+            </Select><br>
+
+            <span><p> Amount of Bill Statement </p></span>
+
+            <label>September, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='BILL_AMT1'><br>
+
+            <label>August, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='BILL_AMT2'><br>
+
+            <label>July, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='BILL_AMT3'><br>
+
+            <label>June, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='BILL_AMT4'><br>
+
+            <label>May, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='BILL_AMT5'><br>
+
+            <label>April, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='BILL_AMT6'><br>
+
+
+            <span><p> Amount of Previous Payment</p></span>
+
+            <label>September, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='PAY_AMT1'><br>
+
+            <label>August, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='PAY_AMT2'><br>
+
+            <label>July, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='PAY_AMT3'><br>
+
+            <label>June, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='PAY_AMT4'><br>
+
+            <label>May, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='PAY_AMT5'><br>
+
+            <label>April, 2005:</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='PAY_AMT6'><br>
+            
+                        
+            
+                <button id=submitbtn type="submit" value="Submit">Submit</button><br>
+           </form>
+
+      </div>
+                    <div id=result1>
+                        <p>Knowing is not enough; we must apply. Willing is not enough; we must do</p>
+                </div>
+
+</div>
+</body>
+    
+    
+</html>
