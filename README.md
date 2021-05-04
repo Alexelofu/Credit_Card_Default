@@ -1,7 +1,7 @@
 # Credit Card Default
 <hr>
 
-#Abstract
+# Abstract
 <hr>
 It is essential for a bank to estimate the credit risk it carries and the magnitude of exposure it has in case of non-performing customers. Estimation of this kind of risk has
 been done by statistical methods through decades and with respect to recent development in the field of machine learning, there has been an interest in investigating if machine
