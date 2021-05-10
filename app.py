@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, jsonify, make_response
+from flask import Flask, render_template, request, jsonify, make_response, redirect, url_for
 import pickle
 import numpy as np
+import json
 
 app = Flask(__name__)
 
@@ -18,17 +19,18 @@ def home():
 def predict():
     int_features = [int(x) for x in request.form.values()]
     final=[np.array(int_features, dtype=float)]
-    prob=loaded_model.predict(final)
+    prob=loaded_model.predict(final)[0]
     
-
-    return render_template('after.html', data=prob)
-
-@app.route('/predict_api', methods=['POST', 'GET'])
-def predict_api():
-    # for direct API calls through request
-
-    data = request.get_json(force=True)
-    prediction = loaded_model.predict([np.array(list(data.values()))])
+   
+    result = 'will default' if prob >= 0.3 else 'will pay'
+    return jsonify(result)
+  
+   #  if prob >= 0.3:
+   #         return jsonify('will default')
+   #  else:
+   #         return jsonify('will pay')
+    
+  
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000, debug=True)
